@@ -84,3 +84,4 @@ document.getElementById('next').addEventListener('click', () => {
         mostrarNumerosPaginas();
     }
 });
+
