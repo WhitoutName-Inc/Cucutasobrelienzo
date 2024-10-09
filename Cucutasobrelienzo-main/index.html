@@ -15,68 +15,53 @@
     <p class="textoFrase" >"El arte no ve las cosas como son sino como pueden ser."- Philip Pullman.</p>
   </div>
   <header>
-      <H1>Cucuta sobre Lienzo</H1>
-
-      <div class="contenedor" >
-        <img class="logoIzq logos" src="images/Logo.png">
-        <nav> 
-            <div class="containerBuscador" >
-              <i class="fa-solid fa-magnifying-glass iconoBuscar"></i>
-              <input class="buscador" type="search">
-            </div>
+    <H1>Cucuta sobre Lienzo</H1>
+    <div class="contenedor" >
+      <img class="logoIzq logos" src="images/Logo.png">
+      <nav> 
+        <div class="containerBuscador" >
+          <i class="fa-solid fa-magnifying-glass iconoBuscar"></i>
+          <input class="buscador" type="search">
+        </div>
 
             
-            <div class="linksContainer">
-              <a href="index.html"><b class="texto">Inicio</b></a>
-              <a href="Colecciones.html"><b class="texto">Colecciones</b></a>
-              <a href="Artistas.html"><b class="texto">Artistas</b></a>
-              <a href="SobreNosotros.html"><b class="texto">Sobre Nosotros</b></a>
-            </div>
-          </nav>
-          <img class="logoDer logos" src="images/CucutaCol.png">
+        <div class="linksContainer">
+          <a href="index.html"><b class="texto">Inicio</b></a>
+          <a href="Colecciones.html"><b class="texto">Colecciones</b></a>
+          <a href="Artistas.html"><b class="texto">Artistas</b></a>
+          <a href="SobreNosotros.html"><b class="texto">Sobre Nosotros</b></a>
         </div>
-  
+      </nav>
+      <img class="logoDer logos" src="images/CucutaCol.png">
+    </div>
+
   </header>
     
   <div class="carousel">
-    <div class="carousel-inner" id="carouselInner">
-        <div class="carousel-item">
-          <img src="images/Obra.jpg" alt="">
-          <div class="datosAutor" >
-            <img src="image.avif">
-            <div class="contactoArtista" >
-              <p>Miguel Angel</p>
-              <a href="">Contáctame</a>
-            </div>
-          </div>
-        </div>
-        <div class="botonDescubre"><p>Descubre</p></div>
-        <div class="carousel-item">
-            <img src="images/Obra.jpg" alt="Slide 2">
-        </div>
+    
+    <div class="botonCarousel botonIzquierda" >
+
+      <i class="icono fa-solid fa-chevron-right"></i>
     </div>
-    <!-- Botones del carrusel fuera de carousel-inner -->
-    <button class="prev" onclick="moveCarousel(-1)">❮</button>
-    <button class="next" onclick="moveCarousel(1)">❯</button>
+
+    <div class="carouselItem">
+
+      <div class="carouselItemImgContainer" >
+        <img class="obra" src="images/Obra.jpg">
+        <img class="perfil" src="image.avif">
+      </div>
+
+      <div class="botonDescubre" >Descubre</div>
+
+    </div>
+
+    <div class="botonCarousel botonDerecha" >
+      <i class="icono fa-solid fa-chevron-right"></i>
+    </div>
   </div>
   
 
 
-  <script>
-    let currentIndex = 0;
-
-    function moveCarousel(direction) {
-        const items = document.querySelectorAll('.carousel-item');
-        const totalItems = items.length;
-        const carouselInner = document.getElementById('carouselInner');
-
-        // Actualiza el índice actual
-        currentIndex = (currentIndex + direction + totalItems) % totalItems;
-
-        // Mueve el carrusel
-        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-</script>
 
 
     <div class="seccionArtistas" >
