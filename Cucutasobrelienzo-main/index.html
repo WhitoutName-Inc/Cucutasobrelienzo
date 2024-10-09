@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CucutaSobreLienzo</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="paginaPrincipal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -119,9 +120,18 @@
       </div>
     </div>
 
-    <div class="noticias" >
+    <div id="noticias" class="noticias"></div>
 
+    <div class="paginas">
+        <button id="previous" class="pagination-button">
+            <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <ul id="pageNumbers" class="page-numbers"></ul>
+        <button id="next" class="pagination-button">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
     </div>
+    
 
     <footer>
       <div class="footer-container">
@@ -155,7 +165,6 @@
           <p>© 2024 cucutasobrelienzo.com. Todos los derechos reservados.</p>
       </div>
   </footer>
--->
 
 </body>
 </html>

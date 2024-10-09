@@ -118,6 +118,102 @@ nav{
 
 
 
+/*Noticias*/
+.noticias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  padding: 60px;
+  gap: 50px;
+}
+
+
+.noticias div {
+  flex: 1 1 40%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.noticias img {
+  margin-top: -18px;
+  width: 100%;
+  height: 70%;
+  border-radius: 8px;
+ 
+}
+
+.noticias h2  a{
+  margin: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  color:rgb(65, 63, 63);
+
+}
+
+.noticias h2:hover{
+  text-decoration: underline;
+  text-decoration-color: rgb(65, 63, 63);
+  cursor: pointer;
+
+}
+
+.noticias p{
+  display: none;
+}
+
+.noticias h4{
+display: none;
+}
+
+.paginas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  background-color: white;
+}
+
+.paginas button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.paginas button:disabled {
+  background-color: white; 
+  cursor: not-allowed; 
+}
+
+.paginas button:hover:not(:disabled) {
+  background-color: white; 
+}
+
+.paginas ul {
+  list-style: none;
+  display: flex;
+  padding: 0px;
+}
+
+.paginas ul li button {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  transition: background-color 0.3s;
+}
+
+
+.paginas ul li button:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
 
 
 
