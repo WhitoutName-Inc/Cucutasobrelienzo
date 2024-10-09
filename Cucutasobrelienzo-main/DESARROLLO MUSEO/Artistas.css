@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerArtistas{
+    padding-top: 10px;
+    width: 90%;
+    text-align: center;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    gap: 1%;
+}
+
+.artista{
+    width: 18%;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
