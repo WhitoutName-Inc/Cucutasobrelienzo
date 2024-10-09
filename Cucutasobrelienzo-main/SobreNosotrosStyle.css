@@ -18,6 +18,7 @@ body{
 }
 .containerImg img{
     width: 100%;
+    justify-content: center;
 }
 .containerSobreNosotros{
     width: 50%;
