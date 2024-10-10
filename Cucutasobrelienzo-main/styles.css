@@ -207,6 +207,7 @@ display: none;
   cursor: pointer;
   color: black;
   transition: background-color 0.3s;
+  margin: 5px;
 }
 
 
@@ -214,6 +215,35 @@ display: none;
   text-decoration: underline;
 }
 
+
+.redes{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+
+.twitter-container {
+  width: 510px;  
+  height: 500px;   
+  overflow-y: scroll; 
+  overflow-x: hidden; 
+  border: 1px solid #ccc; 
+  padding: 5px;  
+  text-size-adjust: 100%;
+  border-radius: 5px ;
+}
+
+.twitter-timeline {
+  width: 100%;
+  height: auto;
+}
+.fb-page{
+  width: 340px;
+  border-radius: 5px;
+}
 
 
 
