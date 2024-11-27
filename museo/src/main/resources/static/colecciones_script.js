@@ -8,29 +8,36 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(colecciones => {
             const container = document.getElementById("coleccionesContainer");
-            container.innerHTML = ""; // Limpia cualquier contenido previo
+            container.innerHTML = ""; // Limpia el contenedor
 
             colecciones.forEach(coleccion => {
-                // Crear un contenedor para cada colección
+                // Crear una tarjeta para cada colección
                 const coleccionHTML = `
-                <div class="containerObra">
-                    <div class="datosObra">
-                        <div class="infObra">
-                            <h2>${coleccion.nombreCol}</h2>
-                            <p>${coleccion.descripcionCol || "Sin descripción"}</p>
-                        </div>
-                        <button onclick="verMas(${coleccion.idColeccion})">Ver Más</button>
-                    </div>
-                    <div class="imagenObra">
-                        <img src="${coleccion.imagen || 'images/default.jpg'}" alt="${coleccion.nombreCol}">
+                <div class="coleccion">
+                    <h2>${coleccion.nombrecol}</h2>
+                    <p><strong>Artista:</strong> ${coleccion.artista.nombres} ${coleccion.artista.apellidos}</p>
+                    <div class="obras">
+                        ${coleccion.obras.map(obra => `
+                            <div class="obra">
+                                <img src="${obra.fotoObraUrl}" alt="${obra.tituloobra}">
+                                <h3>${obra.tituloobra}</h3>
+                                <p><strong>Técnica:</strong> ${obra.tecnica}</p>
+                                <p><strong>Descripción:</strong> ${obra.descripcionobra || 'Sin descripción'}</p>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
                 `;
                 container.insertAdjacentHTML("beforeend", coleccionHTML);
             });
         })
-        .catch(error => console.error("Error al cargar las colecciones:", error));
+        .catch(error => {
+            console.error("Error al cargar las colecciones:", error);
+            const container = document.getElementById("coleccionesContainer");
+            container.innerHTML = `<p>No se pudieron cargar las colecciones. Intenta más tarde.</p>`;
+        });
 });
+
 
 
 
