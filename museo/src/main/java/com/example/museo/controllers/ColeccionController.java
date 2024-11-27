@@ -13,11 +13,12 @@ public class ColeccionController {
 
     @Autowired
     private ColeccionService coleccionService;
-
+    
     @GetMapping
     public List<Coleccion> listarColecciones() {
         return coleccionService.getAllColecciones();
     }
+    
 
     @GetMapping("/{id}")
     public Coleccion obtenerColeccion(@PathVariable Long id) {
