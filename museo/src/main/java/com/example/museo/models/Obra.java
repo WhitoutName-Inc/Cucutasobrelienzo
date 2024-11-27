@@ -6,23 +6,30 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "tmobra")
 public class Obra {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idobra;
 
+    @Column(nullable = false)
     private String tituloobra;
+
     private String fotoObraUrl;
+
     private String tecnica;
+
     private String descripcionobra;
+
     private String fechapubli;
-    @ManyToOne
+
+    @ManyToOne(fetch = FetchType.EAGER) // Cambiar a EAGER
+    @JoinColumn(name = "fk_idartista", nullable = false)
+    private Artista artista;
+
+    @ManyToOne(fetch = FetchType.EAGER) // Cambiar a EAGER
     @JoinColumn(name = "fk_cods", nullable = false)
     private Status status;
 
-
-    @ManyToOne
-    @JoinColumn(name = "fk_idartista", nullable = false)
-    private Artista artista;
 
     // Getters y Setters
 
