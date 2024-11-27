@@ -32,11 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error al cargar las colecciones:", error));
 });
 
-// Función para manejar el botón "Ver Más"
-function verMas(id) {
-    window.location.href = `detalleColeccion.html?id=${id}`;
-}
-
 
 
 
