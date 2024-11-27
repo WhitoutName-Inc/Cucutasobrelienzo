@@ -8,10 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(colecciones => {
             const container = document.getElementById("coleccionesContainer");
-            container.innerHTML = ""; // Limpia el contenedor
+            container.innerHTML = ""; 
 
             colecciones.forEach(coleccion => {
-                // Crear una tarjeta para cada colección
                 const coleccionHTML = `
                 <div class="coleccion">
                     <h2>${coleccion.nombrecol}</h2>
